@@ -1,0 +1,139 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.education-column {
+  position: relative;
+}
+
+.education-card {
+  padding: 2.5rem;
+  border-left: 4px solid var(--secondary);
+}
+
+.card-header-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: rgba(var(--secondary-rgb), 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.education-title {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.5px;
+}
+
+.education-institution {
+  font-size: 1.1rem;
+  color: var(--secondary);
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+
+.education-meta {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.education-loc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.education-details {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.education-details li {
+  position: relative;
+  padding-left: 1.25rem;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.education-details li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--secondary);
+  font-weight: bold;
+}
+
+/* Strengths Styling */
+.sub-title {
+  font-size: 1.8rem;
+  margin-bottom: 1.8rem;
+  position: relative;
+  display: inline-block;
+}
+
+.strengths-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.strength-card {
+  position: relative;
+  overflow: hidden;
+  padding: 1.8rem;
+}
+
+.strength-number {
+  position: absolute;
+  top: 1rem;
+  right: 1.2rem;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.03);
+  font-family: 'Outfit', sans-serif;
+  transition: var(--transition-smooth);
+}
+
+.strength-card:hover .strength-number {
+  color: rgba(var(--secondary-rgb), 0.1);
+  transform: scale(1.1);
+}
+
+.strength-title {
+  font-size: 1.15rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+  letter-spacing: -0.2px;
+}
+
+.strength-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+@media (max-width: 992px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .strengths-grid {
+    grid-template-columns: 1fr;
+  }
+  .education-card {
+    padding: 1.8rem;
+  }
+}
