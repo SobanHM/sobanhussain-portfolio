@@ -52,7 +52,16 @@
   flex-direction: column;
   height: 100%;
   padding: 2.2rem;
+
+  /* allow stronger 3D feel on top of .glass-card */
+  transform-style: preserve-3d;
 }
+
+.project-card:hover {
+  /* slightly different tilt for cards in this section */
+  transform: translateY(-6px) rotateX(6deg) rotateY(8deg);
+}
+
 
 .project-card-header {
   display: flex;

@@ -26,7 +26,16 @@
   padding: 2.15rem;
   overflow: hidden;
   position: relative;
+
+  /* allow stronger 3D feel on top of .glass-card */
+  transform-style: preserve-3d;
 }
+
+.publication-card:hover {
+  /* slightly different tilt for cards in this section */
+  transform: translateY(-6px) rotateX(6deg) rotateY(-8deg);
+}
+
 
 .publication-card::before {
   content: '';
